@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.austral.learning_android"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.austral.learning_android"
