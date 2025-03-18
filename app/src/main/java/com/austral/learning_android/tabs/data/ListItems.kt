@@ -40,6 +40,9 @@ val items = listOf(
     ListItem(
         LearningAndroidScreen.Checkboxes.name,
     ),
+    ListItem(
+        LearningAndroidScreen.Images.name,
+    ),
 )
 
 data class ListItem(

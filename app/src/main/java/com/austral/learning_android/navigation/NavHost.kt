@@ -19,6 +19,7 @@ import com.austral.learning_android.tabs.Chips
 import com.austral.learning_android.tabs.Columns
 import com.austral.learning_android.tabs.FABs
 import com.austral.learning_android.tabs.Icons
+import com.austral.learning_android.tabs.Images
 import com.austral.learning_android.tabs.Rows
 import com.austral.learning_android.tabs.Switches
 import com.austral.learning_android.tabs.Tabs
@@ -81,6 +82,9 @@ fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostControl
         }
         composable(route = LearningAndroidScreen.Checkboxes.name) {
             Checkboxes()
+        }
+        composable(route = LearningAndroidScreen.Images.name) {
+            Images()
         }
     }
 }

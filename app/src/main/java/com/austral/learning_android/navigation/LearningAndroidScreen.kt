@@ -17,4 +17,5 @@ enum class LearningAndroidScreen {
     Tabs,
     FABs,
     Checkboxes,
+    Images,
 }
