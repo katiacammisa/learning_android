@@ -10,6 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.austral.learning_android.MainMenu
+import com.austral.learning_android.favorite.Favorite
 import com.austral.learning_android.tabs.Basic
 import com.austral.learning_android.tabs.Buttons
 import com.austral.learning_android.tabs.Cards
@@ -22,6 +23,7 @@ import com.austral.learning_android.tabs.Rows
 import com.austral.learning_android.tabs.Switches
 import com.austral.learning_android.tabs.Tabs
 import com.austral.learning_android.tabs.Texts
+import com.austral.learning_android.user.User
 
 @Composable
 fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostController) {
@@ -34,6 +36,12 @@ fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostControl
             MainMenu(
                 onClick = { navController.navigate(it) }
             )
+        }
+        composable(route = LearningAndroidScreen.Favorite.name) {
+            Favorite()
+        }
+        composable(route = LearningAndroidScreen.User.name) {
+            User()
         }
 
         composable(route = LearningAndroidScreen.Basics.name) {

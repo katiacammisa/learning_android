@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import com.austral.learning_android.navigation.BottomBar
 import com.austral.learning_android.navigation.NavHostComposable
 import com.austral.learning_android.ui.theme.LearningAndroidTheme
 
@@ -20,7 +21,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             val navController = rememberNavController()
             LearningAndroidTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                Scaffold(
+                    modifier = Modifier.fillMaxSize(),
+                    bottomBar = {
+                        BottomBar(navController::navigate)
+                    }
+                ) { innerPadding ->
                     NavHostComposable(innerPadding, navController)
                 }
             }

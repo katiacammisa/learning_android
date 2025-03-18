@@ -2,6 +2,9 @@ package com.austral.learning_android.navigation
 
 enum class LearningAndroidScreen {
     Home,
+    Favorite,
+    User,
+
     Basics,
     Texts,
     Buttons,
