@@ -25,6 +25,8 @@ import com.austral.learning_android.tabs.Switches
 import com.austral.learning_android.tabs.Tabs
 import com.austral.learning_android.tabs.Texts
 import com.austral.learning_android.user.User
+import com.austral.learning_android.leaningViewModels.LearningViewModel
+import com.austral.learning_android.leaningViewModels.LearningViewModels
 
 @Composable
 fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostController) {
@@ -50,6 +52,10 @@ fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostControl
                 onClick = { navController.navigate(it) }
             )
         }
+        composable(route = LearningAndroidScreen.ViewModels.name) {
+            LearningViewModels()
+        }
+
         composable(route = LearningAndroidScreen.Texts.name) {
             Texts()
         }

@@ -8,6 +8,11 @@ val items = listOf(
         category = ListItemCategory.Initial,
     ),
     ListItem(
+        LearningAndroidScreen.ViewModels.name,
+        category = ListItemCategory.Initial,
+    ),
+
+    ListItem(
         LearningAndroidScreen.Texts.name,
     ),
     ListItem(

@@ -6,6 +6,8 @@ enum class LearningAndroidScreen {
     User,
 
     Basics,
+    ViewModels,
+
     Texts,
     Buttons,
     Rows,
