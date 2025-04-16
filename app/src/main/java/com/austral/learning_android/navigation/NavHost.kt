@@ -10,6 +10,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.austral.learning_android.MainMenu
+import com.austral.learning_android.api.Api
 import com.austral.learning_android.favorite.Favorite
 import com.austral.learning_android.tabs.Basic
 import com.austral.learning_android.tabs.Buttons
@@ -54,6 +55,9 @@ fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostControl
         }
         composable(route = LearningAndroidScreen.ViewModels.name) {
             LearningViewModels()
+        }
+        composable(route = LearningAndroidScreen.API.name) {
+            Api()
         }
 
         composable(route = LearningAndroidScreen.Texts.name) {

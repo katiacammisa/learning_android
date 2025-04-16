@@ -7,6 +7,7 @@ enum class LearningAndroidScreen {
 
     Basics,
     ViewModels,
+    API,
 
     Texts,
     Buttons,

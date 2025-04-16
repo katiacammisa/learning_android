@@ -11,6 +11,10 @@ val items = listOf(
         LearningAndroidScreen.ViewModels.name,
         category = ListItemCategory.Initial,
     ),
+    ListItem(
+        LearningAndroidScreen.API.name,
+        category = ListItemCategory.Initial,
+    ),
 
     ListItem(
         LearningAndroidScreen.Texts.name,
