@@ -28,6 +28,7 @@ import com.austral.learning_android.tabs.Tabs
 import com.austral.learning_android.tabs.Texts
 import com.austral.learning_android.user.User
 import com.austral.learning_android.leaningViewModels.LearningViewModels
+import com.austral.learning_android.room.BirthdayList
 import com.austral.learning_android.tabs.Database
 
 @Composable
@@ -106,8 +107,8 @@ fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostControl
         composable(route = LearningAndroidScreen.Datastore.name) {
             UserName()
         }
-//        composable(route = LearningAndroidScreen.Room.name) {
-//            Room()
-//        }
+        composable(route = LearningAndroidScreen.Room.name) {
+            BirthdayList()
+        }
     }
 }
