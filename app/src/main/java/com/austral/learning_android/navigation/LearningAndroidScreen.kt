@@ -8,6 +8,7 @@ enum class LearningAndroidScreen {
     Basics,
     ViewModels,
     API,
+    Database,
 
     Texts,
     Buttons,
@@ -21,4 +22,7 @@ enum class LearningAndroidScreen {
     FABs,
     Checkboxes,
     Images,
+
+    Datastore,
+    Room,
 }

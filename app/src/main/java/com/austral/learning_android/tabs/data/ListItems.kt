@@ -15,6 +15,10 @@ val items = listOf(
         LearningAndroidScreen.API.name,
         category = ListItemCategory.Initial,
     ),
+    ListItem(
+        LearningAndroidScreen.Database.name,
+        category = ListItemCategory.Initial,
+    ),
 
     ListItem(
         LearningAndroidScreen.Texts.name,
@@ -52,6 +56,15 @@ val items = listOf(
     ListItem(
         LearningAndroidScreen.Images.name,
     ),
+
+    ListItem(
+        LearningAndroidScreen.Datastore.name,
+        category = ListItemCategory.Database,
+    ),
+    ListItem(
+        LearningAndroidScreen.Room.name,
+        category = ListItemCategory.Database,
+    ),
 )
 
 data class ListItem(
@@ -62,4 +75,5 @@ data class ListItem(
 enum class ListItemCategory {
     Initial,
     Basic,
+    Database,
 }
