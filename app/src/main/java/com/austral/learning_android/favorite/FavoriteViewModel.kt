@@ -4,6 +4,7 @@ import android.content.Context
 import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import com.austral.learning_android.security.BiometricAuthManager
+import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -15,6 +16,11 @@ class FavoriteViewModel @Inject constructor(
 ) : ViewModel() {
     private var _isAuthenticated = MutableStateFlow(false)
     val isAuthenticated = _isAuthenticated.asStateFlow()
+
+    private val auth: FirebaseAuth = FirebaseAuth.getInstance()
+
+    private val _userData = MutableStateFlow(auth.currentUser)
+    val userData = _userData.asStateFlow()
 
     fun authenticate(context: Context) {
         biometricAuthManager.authenticate(

@@ -3,6 +3,7 @@ package com.austral.learning_android.favorite
 import androidx.biometric.BiometricManager
 import androidx.biometric.BiometricManager.Authenticators.BIOMETRIC_STRONG
 import androidx.biometric.BiometricManager.Authenticators.DEVICE_CREDENTIAL
+import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -11,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.austral.learning_android.tabs.Columns
 
 @Composable
 fun Favorite() {
@@ -18,6 +20,7 @@ fun Favorite() {
 
     val viewModel = hiltViewModel<FavoriteViewModel>()
     val isAuthenticated by viewModel.isAuthenticated.collectAsStateWithLifecycle()
+    val user by viewModel.userData.collectAsStateWithLifecycle()
 
     LaunchedEffect(Unit) {
         viewModel.authenticate(context)
@@ -32,7 +35,10 @@ fun Favorite() {
         BiometricManager.BIOMETRIC_SUCCESS -> {
             // Biometric features are available
             if(isAuthenticated) {
-                Text(text = "Super classified data that only authenticated in users can access")
+                Column {
+                    Text(text = "Super classified data that only authenticated in users can access")
+                    Text(user?.displayName ?: "")
+                }
             } else {
                 Text(text = "You need to authenticate")
             }

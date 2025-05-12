@@ -1,5 +1,7 @@
 package com.austral.learning_android.navigation
 
+import android.os.Build
+import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -31,6 +33,7 @@ import com.austral.learning_android.leaningViewModels.LearningViewModels
 import com.austral.learning_android.room.BirthdayList
 import com.austral.learning_android.tabs.Database
 
+@RequiresApi(Build.VERSION_CODES.UPSIDE_DOWN_CAKE)
 @Composable
 fun NavHostComposable(innerPadding: PaddingValues, navController: NavHostController) {
     NavHost(
